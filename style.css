@@ -1,0 +1,106 @@
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f1f5f9; /* slate-100 */ 
+}
+
+.text-brand-gray { color: #334155; } /* slate-700 */
+.text-brand-green { color: #059669; } /* emerald-600 */
+.bg-brand-green { background-color: #059669; }
+.border-brand-green { border-color: #059669; }
+.accent-brand-amber { accent-color: #f59e0b; } /* amber-500 */
+
+.section-title { 
+    font-weight: 800; 
+    font-size: 2.25rem; 
+    line-height: 2.5rem; 
+    letter-spacing: -0.025em; 
+    color: #1e293b; /* slate-800 */ 
+}
+
+.nav-link.active { 
+    color: #059669; 
+    font-weight: 600; 
+    border-bottom: 2px solid #059669; 
+}
+
+.nav-link { 
+    transition: all 0.2s; 
+    border-bottom: 2px solid transparent; 
+}
+
+.chart-container { 
+    position: relative; 
+    width: 100%; 
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    height: 350px; 
+    max-height: 500px; 
+}
+
+@media (min-width: 768px) { 
+    .chart-container { height: 450px; } 
+}
+
+/* Module Tabs */
+.tab { 
+    cursor: pointer; 
+    padding: 0.75rem 1.5rem; 
+    border-bottom: 3px solid transparent; 
+    transition: all 0.3s; 
+}
+
+.tab.active { 
+    color: #059669; 
+    border-color: #059669; 
+    font-weight: 600; 
+}
+
+.tab-content { 
+    display: none; 
+}
+
+.tab-content.active { 
+    display: block; 
+}
+        
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos para el Botón de Audio Flotante */
+.audio-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #059669; /* emerald-600 */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.audio-button:hover {
+    background-color: #047857; /* emerald-700 */
+    transform: scale(1.1);
+}
+
+.audio-button svg {
+    width: 28px;
+    height: 28px;
+}
